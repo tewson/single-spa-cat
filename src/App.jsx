@@ -1,3 +1,10 @@
 import React from "react";
 
-export default () => <h1>Cat!</h1>;
+import Status from "./Status";
+
+export default () => (
+  <>
+    <h1>Cat!</h1>
+    <Status />
+  </>
+);
