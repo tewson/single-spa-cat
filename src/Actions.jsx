@@ -2,7 +2,7 @@ import React from "react";
 
 export const ACTION = {
   FEED: "Feed",
-  SEND_MONEY: "Send money"
+  PAY: "Pay"
 };
 
 export default ({ onSelectAction = () => {} }) => {
@@ -17,7 +17,7 @@ export default ({ onSelectAction = () => {} }) => {
         <ActionButton action={ACTION.FEED} />
       </li>
       <li>
-        <ActionButton action={ACTION.SEND_MONEY} />
+        <ActionButton action={ACTION.PAY} />
       </li>
     </ul>
   );

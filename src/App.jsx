@@ -5,7 +5,7 @@ import Status, { STATUS } from "./Status";
 
 const ACTION_STATUS = {
   [ACTION.FEED]: STATUS.FULL,
-  [ACTION.SEND_MONEY]: STATUS.RICH
+  [ACTION.PAY]: STATUS.RICH
 };
 
 export default () => {
