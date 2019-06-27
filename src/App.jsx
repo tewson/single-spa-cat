@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
-import Actions from "./Actions";
-import Status from "./Status";
+import Actions, { ACTION } from "./Actions";
+import Status, { STATUS } from "./Status";
 
-export default () => (
-  <>
-    <h1>Cat!</h1>
-    <Status />
-    <Actions />
-  </>
-);
+const ACTION_STATUS = {
+  [ACTION.FEED]: STATUS.FULL,
+  [ACTION.SEND_MONEY]: STATUS.RICH
+};
+
+export default () => {
+  const [status, setStatus] = useState(STATUS.IDLE);
+  const handleSelectAction = action => setStatus(ACTION_STATUS[action]);
+  return (
+    <>
+      <h1>Cat!</h1>
+      <Status status={status} />
+      <Actions onSelectAction={handleSelectAction} />
+    </>
+  );
+};

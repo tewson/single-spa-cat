@@ -1,6 +1,6 @@
 import React from "react";
 
-const ACTION = {
+export const ACTION = {
   FEED: "Feed",
   SEND_MONEY: "Send money"
 };
