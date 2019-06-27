@@ -8,7 +8,11 @@ export const ACTION = {
 export default ({ onSelectAction = () => {} }) => {
   const ActionButton = ({ action }) => {
     const handleActionButtonClick = () => onSelectAction(action);
-    return <button onClick={handleActionButtonClick}>{action}</button>;
+    return (
+      <button onClick={handleActionButtonClick} style={{ fontSize: "2rem" }}>
+        {action}
+      </button>
+    );
   };
 
   return (
