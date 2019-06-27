@@ -9,6 +9,6 @@ export const STATUS = {
 export default ({ status = STATUS.IDLE }) => (
   <>
     <h2>Status:</h2>
-    <img src={status} />
+    <img src={status} style={{ height: 200 }} />
   </>
 );
