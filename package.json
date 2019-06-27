@@ -1,0 +1,9 @@
+{
+  "name": "cat",
+  "version": "1.0.0",
+  "description": "Cat App!",
+  "main": "index.js",
+  "author": "Tewson Seeoun <tewson.seeoun@toasttab.com>",
+  "license": "MIT",
+  "private": true
+}
