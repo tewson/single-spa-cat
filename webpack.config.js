@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = {
+const baseConfig = {
   module: {
     rules: [
       {
@@ -12,9 +12,30 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"]
   },
+  devServer: {
+    port: 8080,
+    headers: {
+      "Access-Control-Allow-Origin": "*"
+    }
+  }
+};
+
+const standAloneConfig = {
+  ...baseConfig,
   plugins: [
     new HtmlWebpackPlugin({
       template: "src/index.html"
     })
   ]
 };
+
+const singleSpaConfig = {
+  ...baseConfig,
+  entry: "./src/indexSingleSpa.js",
+  output: {
+    filename: "catSingleSpaBundle.js",
+    libraryTarget: "system"
+  }
+};
+
+module.exports = [standAloneConfig, singleSpaConfig];

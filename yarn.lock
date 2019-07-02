@@ -3716,6 +3716,11 @@ signal-exit@^3.0.0:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
   integrity sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
 
+single-spa-react@^2.10.2:
+  version "2.10.2"
+  resolved "https://registry.yarnpkg.com/single-spa-react/-/single-spa-react-2.10.2.tgz#5033d454a9299170e5cc086b07f319862ee459c7"
+  integrity sha512-8zOQJRDdZ5Uo7K2RutBiapKuNvlP9Sw3qeQYN1nhSvouc4M/NpIWA1VIsDkv4JUka7zG0eRd5CEbDYN6zz6lYA==
+
 snapdragon-node@^2.0.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/snapdragon-node/-/snapdragon-node-2.1.1.tgz#6c175f86ff14bdb0724563e8f3c1b021a286853b"
