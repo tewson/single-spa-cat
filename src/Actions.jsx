@@ -1,11 +1,12 @@
 import React from "react";
+import { SingleSpaContext } from "single-spa-react";
 
 export const ACTION = {
   FEED: "Feed",
   PAY: "Pay"
 };
 
-export default ({ onSelectAction = () => {} }) => {
+export default ({ onSelectAction = () => { } }) => {
   const ActionButton = ({ action }) => {
     const handleActionButtonClick = () => onSelectAction(action);
     return (
@@ -22,6 +23,11 @@ export default ({ onSelectAction = () => {} }) => {
       </li>
       <li>
         <ActionButton action={ACTION.PAY} />
+      </li>
+      <li>
+        <SingleSpaContext.Consumer>
+          {({ history }) => <button onClick={() => history.push('/dog/feed')}>Feed dog</button>}
+        </SingleSpaContext.Consumer>
       </li>
     </ul>
   );
